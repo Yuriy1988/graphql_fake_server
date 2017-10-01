@@ -17,3 +17,4 @@ var app = express();
 app.use('/', JsonGraphqlServer.jsonGraphqlExpress(data));
 app.listen(PORT);
 var msg = `GraphQL server running with your data at http://localhost:${PORT}/`;
+console.log(msg); // eslint-disable-line

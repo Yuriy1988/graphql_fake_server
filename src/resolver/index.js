@@ -18,11 +18,15 @@ const getQueryResolvers = (entityName, data) => ({
     [entityName]: single(data),
 });
 
-const getMutationResolvers = (entityName, data) => ({
-    [`create${entityName}`]: create(data),
-    [`update${entityName}`]: update(data),
-    [`remove${entityName}`]: remove(data),
-});
+const getMutationResolvers = (entityName, data) => {
+    console.log(0, entityName)
+    console.log(1, data)
+    return {
+        [`create${entityName}`]: create(data),
+        [`update${entityName}`]: update(data),
+        [`remove${entityName}`]: remove(data),
+    };
+};
 
 export default data => {
     return Object.assign(

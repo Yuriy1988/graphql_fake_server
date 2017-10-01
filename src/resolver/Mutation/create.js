@@ -4,5 +4,6 @@ export default (entityData = []) => (_, entity) => {
     const newEntity = Object.assign({ id: newId }, entity);
 
     entityData.push(newEntity);
+
     return newEntity;
 };
