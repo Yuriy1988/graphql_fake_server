@@ -31,7 +31,7 @@ const requiredTypeOrNormal = (type, isRequired) =>
 
 export default (name, values = [], isRequired = false) => {
     if (name === 'id' || name.substr(name.length - 3) === '_id') {
-        return requiredTypeOrNormal(GraphQLID, isRequired);
+        return requiredTypeOrNormal(GraphQLID);
     }
     if (values.length > 0) {
         if (valuesAreArray(values)) {
@@ -41,54 +41,49 @@ export default (name, values = [], isRequired = false) => {
             }, []);
             if (valuesAreBoolean(leafValues)) {
                 return requiredTypeOrNormal(
-                    new GraphQLList(GraphQLBoolean),
-                    isRequired
+                    new GraphQLList(GraphQLBoolean)
                 );
             }
             if (valuesAreString(leafValues)) {
                 return requiredTypeOrNormal(
-                    new GraphQLList(GraphQLString),
-                    isRequired
+                    new GraphQLList(GraphQLString)
                 );
             }
             if (valuesAreInteger(leafValues)) {
                 return requiredTypeOrNormal(
-                    new GraphQLList(GraphQLInt),
-                    isRequired
+                    new GraphQLList(GraphQLInt)
                 );
             }
             if (valuesAreNumeric(leafValues)) {
                 return requiredTypeOrNormal(
-                    new GraphQLList(GraphQLFloat),
-                    isRequired
+                    new GraphQLList(GraphQLFloat)
                 );
             }
             if (valuesAreObject(leafValues)) {
-                return requiredTypeOrNormal(GraphQLJSON, isRequired);
+                return requiredTypeOrNormal(GraphQLJSON);
             }
             return requiredTypeOrNormal(
-                new GraphQLList(GraphQLString),
-                isRequired
+                new GraphQLList(GraphQLString)
             ); // FIXME introspect further
         }
         if (valuesAreBoolean(values)) {
-            return requiredTypeOrNormal(GraphQLBoolean, isRequired);
+            return requiredTypeOrNormal(GraphQLBoolean);
         }
         if (valuesAreDate(values)) {
-            return requiredTypeOrNormal(DateType, isRequired);
+            return requiredTypeOrNormal(DateType);
         }
         if (valuesAreString(values)) {
-            return requiredTypeOrNormal(GraphQLString, isRequired);
+            return requiredTypeOrNormal(GraphQLString);
         }
         if (valuesAreInteger(values)) {
-            return requiredTypeOrNormal(GraphQLInt, isRequired);
+            return requiredTypeOrNormal(GraphQLInt);
         }
         if (valuesAreNumeric(values)) {
-            return requiredTypeOrNormal(GraphQLFloat, isRequired);
+            return requiredTypeOrNormal(GraphQLFloat);
         }
         if (valuesAreObject(values)) {
-            return requiredTypeOrNormal(GraphQLJSON, isRequired);
+            return requiredTypeOrNormal(GraphQLJSON);
         }
     }
-    return requiredTypeOrNormal(GraphQLString, isRequired); // FIXME introspect further
+    return requiredTypeOrNormal(GraphQLString); // FIXME introspect further
 };

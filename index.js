@@ -6,16 +6,17 @@ const express = require('express');
 const JsonGraphqlServer = require('./src/index');
 const fs = require('fs');
 const file = 'db.json';
+const ip = require("ip");
 
 // fixme the build fails without those
 global.window = false;
 global.document = false;
 global.navigator = false;
 
-var dataFilePath = process.argv.length > 2 ? process.argv[2] : file;
-var data = require(path.join(process.cwd(), dataFilePath));
-var PORT = 4000;
-var app = express();
+const dataFilePath = process.argv.length > 2 ? process.argv[2] : file;
+const data = require(path.join(process.cwd(), dataFilePath));
+const PORT = process.env.PORT || 4000;
+const app = express();
 
 app.use((req, res, next) => {
     if (req.method === 'POST') {
@@ -42,5 +43,6 @@ app.use((req, res, next) => {
 app.use('/', JsonGraphqlServer.jsonGraphqlExpress(data));
 
 app.listen(PORT);
-var msg = `GraphQL server running with your data at http://localhost:${PORT}/`;
+
+const msg = `GraphQL server running with your data at http://${ip.address()}:${PORT}/`;
 console.log(msg); // eslint-disable-line

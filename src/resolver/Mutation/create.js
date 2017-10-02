@@ -1,9 +1,11 @@
+import uuidv1 from 'uuid/v1';
+
 export default (entityData = []) => (_, entity) => {
-    const newId =
-        entityData.length > 0 ? entityData[entityData.length - 1].id + 1 : 0;
-    const newEntity = Object.assign({ id: newId }, entity);
+    const time = new Date();
+    const id = uuidv1();
+    const createdAt = time.toISOString();
 
+    const newEntity = Object.assign({ id, createdAt, updatedAt: createdAt }, entity);
     entityData.push(newEntity);
-
     return newEntity;
 };
