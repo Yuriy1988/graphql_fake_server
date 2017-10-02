@@ -41,7 +41,7 @@ import getSchemaFromData from './introspection/getSchemaFromData';
  * GraphQLClientServer(data);
  * GraphQLClientServer(data, 'http://localhost:8080/api/graphql');
  */
-export default function(data, url = 'http://localhost:3000/graphql') {
+export default function(data, url) {
     const schema = getSchemaFromData(data);
 
     const server = new MockHttpServer(req => {

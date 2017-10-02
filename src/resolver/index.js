@@ -19,8 +19,6 @@ const getQueryResolvers = (entityName, data) => ({
 });
 
 const getMutationResolvers = (entityName, data) => {
-    console.log(0, entityName)
-    console.log(1, data)
     return {
         [`create${entityName}`]: create(data),
         [`update${entityName}`]: update(data),
