@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 require('reify');
-
+const favicon = require('serve-favicon');
 const path = require('path');
 const express = require('express');
 const JsonGraphqlServer = require('./src/index');
@@ -17,6 +17,8 @@ const dataFilePath = process.argv.length > 2 ? process.argv[2] : file;
 const data = require(path.join(process.cwd(), dataFilePath));
 const PORT = process.env.PORT || 4000;
 const app = express();
+
+app.use(favicon(path.join(__dirname, 'src', 'favicon.ico')));
 
 app.use((req, res, next) => {
     if (req.method === 'POST') {
@@ -41,6 +43,7 @@ app.use((req, res, next) => {
 });
 
 app.use('/', JsonGraphqlServer.jsonGraphqlExpress(data));
+
 
 app.listen(PORT);
 
