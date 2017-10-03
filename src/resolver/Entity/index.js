@@ -64,8 +64,7 @@ export default (entityName, data) => {
         {}
     );
     const relatedField = getReverseRelatedField(entityName); // 'posts' => 'post_id'
-    const hasReverseRelationship = entityName =>
-        getFieldsFromEntities(data[entityName]).hasOwnProperty(relatedField);
+    const hasReverseRelationship = entityName => getFieldsFromEntities(data[entityName]).hasOwnProperty(relatedField);
     const entities = Object.keys(data);
     const oneToManyResolvers = entities.filter(hasReverseRelationship).reduce(
         (resolvers, entityName) =>
