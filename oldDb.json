@@ -25,7 +25,7 @@
         "cj84jqi7w35wt0125p9xkjtgp"
       ],
       "venue_id":[
-        "cj84lcehg5ovh0181ov9ygygr"
+        "venue1"
       ],
       "name":"Ukraine",
       "updatedAt":"2017-09-28 14:31:50.0",
@@ -37,7 +37,7 @@
       "id":"cj84fzsbp2tpq01741891u9bn",
       "country_id":"cj84k5y023uym0138fu076me1",
       "venue_id":[
-        "cj84lcehg5ovh0181ov9ygygr"
+        "venue1"
       ],
       "name":"Dnipro",
       "updatedAt":"2017-09-28 12:35:05.0",
@@ -60,7 +60,7 @@
     {
       "id":"cj84fx90938a701779sv72cnl",
       "venue_id":[
-        "cj84lcehg5ovh0181ov9ygygr"
+        "venue1"
       ],
       "name":"DniproRegion",
       "updatedAt":"2017-09-28 12:34:24.0",
@@ -84,7 +84,7 @@
   ],
   "venues":[
     {
-      "id":"cj84lcehg5ovh0181ov9ygygr",
+      "id":"venue1",
       "country_id":"cj84k5y023uym0138fu076me1",
       "city_id":"cj84fzsbp2tpq01741891u9bn",
       "region_id":"cj84fx90938a701779sv72cnl",
@@ -101,14 +101,14 @@
       "createdAt":"2017-09-28 15:04:51.0",
       "longtitude":2,
       "publishEventsOnWeb":"Do not publish",
-      "venue_info_id":["vinf1", "vinf2"],
-      "entry_id":[
-        "324324324324235265"
+      "info_id":"vinf1",
+      "venue_entry_id":[
+        "venue_entry1"
       ],
       "box_office_id":"908908"
     },
     {
-      "id":"cj84ld1235hxg01786y6xa3po",
+      "id":"venue2",
       "country_id":"cj84k5y023uym0138fu076me1",
       "city_id":"cj84fzsbp2tpq01741891u9bn",
       "region_id":"cj84fx90938a701779sv72cnl",
@@ -125,57 +125,56 @@
       "createdAt":"2017-09-28 15:05:21.0",
       "longtitude":222,
       "publishEventsOnWeb":"Do not publish",
-      "venue_info_id":[],
-      "entry_id":[
-        "324324324324235266"
+      "info_id":"vinf2",
+      "venue_entry_id":[
+        "venue_entry2"
       ],
       "box_office_id":"908908"
     }
   ],
-  "venue_infos": [
-    {
-      "id": "vinf1",
-      "venue_id":"cj84lcehg5ovh0181ov9ygygr",
-      "info_id":"1"
-    },
-    {
-      "id": "vinf2",
-      "venue_id":"cj84lcehg5ovh0181ov9ygygr",
-      "info_id":"2"
-    }
-  ],
   "infos":[
     {
-      "id":"1",
+      "id":"vinf1",
       "fileName":"SomeFile",
       "description":"meaningless description",
       "modificationDate":"cool date",
       "linkedTo":"some link",
-      "venue_info_id":"vinf1"
+      "venue_id":["venue1"]
     },
     {
-      "id":"2",
+      "id":"vinf2",
       "fileName":"SomeFile 2",
       "description":"meaningless description 2",
       "modificationDate":"cool date 2",
       "linkedTo":"some link 2",
-      "venue_info_id":"vinf2"
+      "venue_id":["venue2"]
+    }
+  ],
+  "venue_entries": [
+    {
+      "id":"venue_entry1",
+      "venue_id": "venue1",
+      "entry_id": "entry1"
+    }, {
+      "id":"venue_entry2",
+      "venue_id": "venue2",
+      "entry_id": "entry2"
     }
   ],
   "entries":[
     {
-      "id":"324324324324235265",
+      "id":"entry1",
       "canBeSold":true,
       "forwardAcceptedOn":false,
       "value":"canBeSold",
-      "venue_id":"cj84lcehg5ovh0181ov9ygygr"
+      "venue_entry_id":"venue_entry1"
     },
     {
-      "id":"324324324324235266",
+      "id":"entry2",
       "canBeSold":false,
       "forwardAcceptedOn":true,
       "value":"forwardAcceptedOn",
-      "venue_id":"cj84ld1235hxg01786y6xa3po"
+      "venue_entry_id":"venue_entry2"
     }
   ],
   "box_offices":[
@@ -183,8 +182,8 @@
       "id":"908908",
       "name":"some class name",
       "venue_id":[
-        "cj84ld1235hxg01786y6xa3po",
-        "cj84lcehg5ovh0181ov9ygygr"
+        "venue2",
+        "venue1"
       ]
     },
     {
