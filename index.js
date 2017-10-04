@@ -41,6 +41,10 @@ app.use((req, res, next) => {
         next();
     }
 });
+app.use('/db', (req, res) => {
+    const data = fs.readFileSync(file);
+    res.send(global.JSON.parse(data));
+});
 
 app.use('/', JsonGraphqlServer.jsonGraphqlExpress(data));
 
