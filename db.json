@@ -1,1 +1,211 @@
-{"languages":[{"createdAt":"2017-09-28 14:34:20.0","updatedAt":"2017-09-28 14:34:20.0","value":"Ukrainian","id":"cj84k95il3yj301708hzb9m0z"},{"createdAt":"2017-09-28 14:34:45.0","updatedAt":"2017-09-28 14:34:45.0","value":"English","id":"cj84k9oxk3wzb0178nkgp530d"}],"countries":[{"id":"cj84k5y023uym0138fu076me1","city_id":["cj84fzsbp2tpq01741891u9bn","cj84jqoaf3cc70181rdn4t3iv"],"region_id":["cj84fx90938a701779sv72cnl","cj84jqi7w35wt0125p9xkjtgp"],"venue_id":["venue1"],"name":"Ukraine","updatedAt":"2017-09-28 14:31:50.0","createdAt":"2017-09-28 14:31:50.0"}],"cities":[{"id":"cj84fzsbp2tpq01741891u9bn","country_id":"cj84k5y023uym0138fu076me1","venue_id":["venue1"],"name":"Dnipro","updatedAt":"2017-09-28 12:35:05.0","createdAt":"2017-09-28 12:35:05.0"},{"id":"cj84jqoaf3cc70181rdn4t3iv","country_id":["cj84k5y023uym0138fu076me1"],"venue_id":[],"name":"Kiev","updatedAt":"2017-09-28 14:19:58.0","createdAt":"2017-09-28 14:19:58.0"}],"regions":[{"id":"cj84fx90938a701779sv72cnl","venue_id":["venue1"],"name":"DniproRegion","updatedAt":"2017-09-28 12:34:24.0","country_id":["cj84k5y023uym0138fu076me1"],"createdAt":"2017-09-28 12:33:06.0"},{"id":"cj84jqi7w35wt0125p9xkjtgp","country_id":["cj84k5y023uym0138fu076me1"],"venue_id":[],"name":"KievRegion","updatedAt":"2017-09-28 14:19:50.0","createdAt":"2017-09-28 14:19:50.0"}],"venues":[{"id":"venue1","country_id":"cj84k5y023uym0138fu076me1","city_id":"cj84fzsbp2tpq01741891u9bn","region_id":"cj84fx90938a701779sv72cnl","shortCode":"Some trash","name":"someName","updatedAt":"2017-09-28 15:04:51.0","system":"WTF","latitude":1,"url":"https://google.com","venueCode":"Cool Code","description":"Cool venue","adress":"SomeAdress","postalCode":"777","createdAt":"2017-09-28 15:04:51.0","longtitude":2,"publishEventsOnWeb":"Do not publish","info_id":"vinf1","venue_entry_id":["venue_entry1"],"box_office_id":"908908"},{"id":"venue2","country_id":"cj84k5y023uym0138fu076me1","city_id":"cj84fzsbp2tpq01741891u9bn","region_id":"cj84fx90938a701779sv72cnl","shortCode":"Some trash","name":"someName 2","updatedAt":"2017-09-28 15:05:21.0","system":"WTF","latitude":111,"url":"https://google.com","venueCode":"Cool Code 2","description":"Not so cool venue","adress":"SomeAdress 2","postalCode":"777","createdAt":"2017-09-28 15:05:21.0","longtitude":222,"publishEventsOnWeb":"Do not publish","info_id":"vinf2","venue_entry_id":["venue_entry2"],"box_office_id":"908908"}],"infos":[{"id":"vinf1","fileName":"SomeFile","description":"meaningless description","modificationDate":"cool date","linkedTo":"some link","venue_id":["venue1"]},{"id":"vinf2","fileName":"SomeFile 2","description":"meaningless description 2","modificationDate":"cool date 2","linkedTo":"some link 2","venue_id":["venue2"]}],"venue_entries":[{"id":"venue_entry1","venue_id":"venue1","entry_id":"entry1"},{"id":"venue_entry2","venue_id":"venue2","entry_id":"entry2"}],"entries":[{"id":"entry1","canBeSold":true,"forwardAcceptedOn":false,"value":"canBeSold","name":"some entry media that can be sold","venue_entry_id":"venue_entry1"},{"id":"entry2","canBeSold":false,"forwardAcceptedOn":true,"value":"forwardAcceptedOn","name":"some entry media that can not be sold","venue_entry_id":"venue_entry2"}],"box_offices":[{"id":"908908","name":"some class name","venue_id":["venue2","venue1"]},{"id":"908909","name":"some class name 2","venue_id":[]},{"id":"908919","name":"some class name 3","venue_id":[]}]}
+{
+  "languages":[
+    {
+      "createdAt":"2017-09-28 14:34:20.0",
+      "updatedAt":"2017-09-28 14:34:20.0",
+      "value":"Ukrainian",
+      "id":"cj84k95il3yj301708hzb9m0z"
+    },
+    {
+      "createdAt":"2017-09-28 14:34:45.0",
+      "updatedAt":"2017-09-28 14:34:45.0",
+      "value":"English",
+      "id":"cj84k9oxk3wzb0178nkgp530d"
+    }
+  ],
+  "countries":[
+    {
+      "id":"cj84k5y023uym0138fu076me1",
+      "city_id":[
+        "cj84fzsbp2tpq01741891u9bn",
+        "cj84jqoaf3cc70181rdn4t3iv"
+      ],
+      "region_id":[
+        "cj84fx90938a701779sv72cnl",
+        "cj84jqi7w35wt0125p9xkjtgp"
+      ],
+      "venue_id":[
+        "venue1"
+      ],
+      "name":"Ukraine",
+      "updatedAt":"2017-09-28 14:31:50.0",
+      "createdAt":"2017-09-28 14:31:50.0"
+    }
+  ],
+  "cities":[
+    {
+      "id":"cj84fzsbp2tpq01741891u9bn",
+      "country_id":"cj84k5y023uym0138fu076me1",
+      "venue_id":[
+        "venue1"
+      ],
+      "name":"Dnipro",
+      "updatedAt":"2017-09-28 12:35:05.0",
+      "createdAt":"2017-09-28 12:35:05.0"
+    },
+    {
+      "id":"cj84jqoaf3cc70181rdn4t3iv",
+      "country_id":[
+        "cj84k5y023uym0138fu076me1"
+      ],
+      "venue_id":[
+
+      ],
+      "name":"Kiev",
+      "updatedAt":"2017-09-28 14:19:58.0",
+      "createdAt":"2017-09-28 14:19:58.0"
+    }
+  ],
+  "regions":[
+    {
+      "id":"cj84fx90938a701779sv72cnl",
+      "venue_id":[
+        "venue1"
+      ],
+      "name":"DniproRegion",
+      "updatedAt":"2017-09-28 12:34:24.0",
+      "country_id":[
+        "cj84k5y023uym0138fu076me1"
+      ],
+      "createdAt":"2017-09-28 12:33:06.0"
+    },
+    {
+      "id":"cj84jqi7w35wt0125p9xkjtgp",
+      "country_id":[
+        "cj84k5y023uym0138fu076me1"
+      ],
+      "venue_id":[
+
+      ],
+      "name":"KievRegion",
+      "updatedAt":"2017-09-28 14:19:50.0",
+      "createdAt":"2017-09-28 14:19:50.0"
+    }
+  ],
+  "venues":[
+    {
+      "id":"venue1",
+      "country_id":"cj84k5y023uym0138fu076me1",
+      "city_id":"cj84fzsbp2tpq01741891u9bn",
+      "region_id":"cj84fx90938a701779sv72cnl",
+      "shortCode":"Some trash",
+      "name":"someName",
+      "updatedAt":"2017-09-28 15:04:51.0",
+      "system":"WTF",
+      "latitude":1,
+      "url":"https://google.com",
+      "venueCode":"Cool Code",
+      "description":"Cool venue",
+      "address":"SomeAddress",
+      "postalCode":"777",
+      "createdAt":"2017-09-28 15:04:51.0",
+      "longtitude":2,
+      "publishEventsOnWeb":"Do not publish",
+      "info_id":"vinf1",
+      "venue_entry_id":[
+        "venue_entry1"
+      ],
+      "box_office_id":"908908"
+    },
+    {
+      "id":"venue2",
+      "country_id":"cj84k5y023uym0138fu076me1",
+      "city_id":"cj84fzsbp2tpq01741891u9bn",
+      "region_id":"cj84fx90938a701779sv72cnl",
+      "shortCode":"Some trash",
+      "name":"someName 2",
+      "updatedAt":"2017-09-28 15:05:21.0",
+      "system":"WTF",
+      "latitude":111,
+      "url":"https://google.com",
+      "venueCode":"Cool Code 2",
+      "description":"Not so cool venue",
+      "address":"SomeAddress 2",
+      "postalCode":"777",
+      "createdAt":"2017-09-28 15:05:21.0",
+      "longtitude":222,
+      "publishEventsOnWeb":"Do not publish",
+      "info_id":"vinf2",
+      "venue_entry_id":[
+        "venue_entry2"
+      ],
+      "box_office_id":"908908"
+    }
+  ],
+  "infos":[
+    {
+      "id":"vinf1",
+      "fileName":"SomeFile",
+      "description":"meaningless description",
+      "modificationDate":"cool date",
+      "linkedTo":"some link",
+      "venue_id":[
+        "venue1"
+      ]
+    },
+    {
+      "id":"vinf2",
+      "fileName":"SomeFile 2",
+      "description":"meaningless description 2",
+      "modificationDate":"cool date 2",
+      "linkedTo":"some link 2",
+      "venue_id":[
+        "venue2"
+      ]
+    }
+  ],
+  "venue_entries":[
+    {
+      "id":"venue_entry1",
+      "venue_id":"venue1",
+      "entry_id":"entry1"
+    },
+    {
+      "id":"venue_entry2",
+      "venue_id":"venue2",
+      "entry_id":"entry2"
+    }
+  ],
+  "entries":[
+    {
+      "id":"entry1",
+      "canBeSold":true,
+      "forwardAcceptedOn":false,
+      "value":"canBeSold",
+      "name":"some entry media that can be sold",
+      "venue_entry_id":"venue_entry1"
+    },
+    {
+      "id":"entry2",
+      "canBeSold":false,
+      "forwardAcceptedOn":true,
+      "value":"forwardAcceptedOn",
+      "name":"some entry media that can not be sold",
+      "venue_entry_id":"venue_entry2"
+    }
+  ],
+  "box_offices":[
+    {
+      "id":"908908",
+      "name":"some class name",
+      "venue_id":[
+        "venue2",
+        "venue1"
+      ]
+    },
+    {
+      "id":"908909",
+      "name":"some class name 2",
+      "venue_id":[
+
+      ]
+    },
+    {
+      "id":"908919",
+      "name":"some class name 3",
+      "venue_id":[
+
+      ]
+    }
+  ]
+}
